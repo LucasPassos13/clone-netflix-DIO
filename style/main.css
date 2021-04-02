@@ -1,0 +1,113 @@
+:root{
+    --vermelho: #e50914;
+    --preto: #141414;
+
+}
+
+*{
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ELEMENTOS BASE*/
+
+body{
+    background: var(--preto);
+    font-family: 'Trebuchet', Times, serif;
+    color: white;
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    color: var(--vermelho);
+    font-family: 'Trebuchet', Times;
+    font-size: 30px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+
+}
+
+header nav a:hover{
+    color: #fff;
+}
+
+
+/* FILME PRICIPAL*/
+
+.filme-pricipal{
+    font-size:  16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('/img/capa_act.jpg');
+
+    height: 450px;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-pricipal .descricao{
+    margin-bottom: 55px;
+    margin-top: 10%;
+}
+
+.filme-pricipal .titulo{
+    margin-top: 10%;
+    font-size: 35px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.filme-pricipal .button{
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    color: #fff;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .5s ease all;
+}
+
+.filme-pricipal .button:hover{
+    background-color: white;
+    color: black;
+    
+}
+
+.filme-pricipal .button i{
+    margin-right: 6px;
+}
+
+.container{
+    margin-left:  15px;
+    margin-right: 10px;;
+}
+
+.filme-pricipal .container{
+    width: 50%;
+}
+
+
+.box-filme{
+    height: 70%;
+    width:  70%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+}
