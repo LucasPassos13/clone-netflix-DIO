@@ -1,86 +1,137 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CriminalTV | Tudummm</title>
-    <link rel="stylesheet" href="style/main.css">
-    <link rel="shortcut icon" href="img/favicon.ico"
-
-     <!-- resposividade -->
-     <link rel="stylesheet" href="style/responsive.css">
-
-    <!-- owl css -->
-    <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
-    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+    <title>Meu Café - Comparação de Preços</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
-   <header>
-       <div class="container">
-            <h2 class="logo">CriminalTV</h2>
-            <nav>
-                <a href="#">Inicio</a>
-                <a href="#">Séries</a>
-                <a href="#">Documentários</a>
-                <a href="#">Filmes</a>
-                <a href="#">Entrevista</a>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-coffee"></i>
+                <h1>Meu Café</h1>
+            </div>
+            <nav class="nav">
+                <a href="#comparacao">Comparação</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#doacao">Doação</a>
             </nav>
-       </div>
-   </header>
-  
-   <main>
-        <div class="filme-pricipal">
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
             <div class="container">
-                <h3 class="titulo">The Act</h3>
-                <p class="descricao">O relacionamento entre Dee Dee Blanchard e sua filha Gypsy,
-                     que acreditou ter uma grave doença durante toda a vida por causa 
-                     da mãe extremamente controladora e insegura. Em busca de independência 
-                     para viver um amor proibido, Gypsy decide então orquestrar 
-                     um assassinato.
-                </p>
-                <div class="botoes">
-                    <button role=button class="button" onclick="clicou()">
-                    <i class="fas fa-play"></i>
-                    
-                        Assistir
-                    </button>
-                    <button role=button class="button">
-                    <i class="fas fa-info-circle"></i>
-                        Informações
+                <div class="hero-content">
+                    <h2>Descubra o verdadeiro valor do seu café</h2>
+                    <p>Compare o preço do café com outros produtos básicos e veja como cada real gasto se traduz em itens essenciais para sua casa.</p>
+                    <button class="cta-button" onclick="scrollToSection('comparacao')">
+                        <i class="fas fa-chart-line"></i>
+                        Ver Comparação
                     </button>
                 </div>
+                <div class="hero-image">
+                    <i class="fas fa-coffee hero-icon"></i>
+                </div>
             </div>
-        </div>
-   </main>
+        </section>
 
-   <div class="carrosel-filmes">
-    <div class="owl-carousel owl-theme">
-        <div class="item">
-            <img class="box-filme" src="img/image1.jpg">
-        </div>
-        <div> 
-            <img class="box-filme" src="img/image2.jpg">
-        </div>
-        <div>
-            <img class="box-filme" src="img/image3.jpg">
-        </div>
-        <div>
-            <img class="box-filme" src="img/image4.jpg">
-        </div>
-        <div>
-            <img class="box-filme" src="img/image5.jpg">
-        </div>
-        
-    </div>
-   </div>
+        <!-- Comparação de Preços -->
+        <section id="comparacao" class="comparison">
+            <div class="container">
+                <h2>Comparação de Preços</h2>
+                <p class="section-subtitle">Veja quanto você gasta em café comparado a outros produtos básicos</p>
+                
+                <div class="price-input-section">
+                    <label for="coffee-price">Preço do seu café (R$):</label>
+                    <input type="number" id="coffee-price" placeholder="0.00" step="0.01" min="0">
+                    <button onclick="updateComparison()">Atualizar Comparação</button>
+                </div>
 
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
-    <script src="js/owl/jquery.min.js"></script>
-    <script src="js/owl/owl.carousel.min.js"></script>
-    <script src="js/owl/main.js"></script>
+                <div class="comparison-grid" id="comparison-grid">
+                    <!-- Os itens serão gerados dinamicamente -->
+                </div>
+            </div>
+        </section>
 
+        <!-- Seção Sobre -->
+        <section id="sobre" class="about">
+            <div class="container">
+                <h2>Sobre o Projeto</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>O "Meu Café" foi criado para ajudar você a entender melhor o valor do seu dinheiro. Muitas vezes gastamos pequenas quantias sem perceber o impacto real no nosso orçamento.</p>
+                        <p>Esta ferramenta permite comparar o preço do seu café com outros produtos básicos, mostrando quantos itens essenciais você poderia comprar com o mesmo valor.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <i class="fas fa-calculator"></i>
+                            <h3>Comparação Inteligente</h3>
+                            <p>Algoritmo que calcula automaticamente as equivalências</p>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-chart-pie"></i>
+                            <h3>Dados Atualizados</h3>
+                            <p>Preços baseados em dados reais do mercado</p>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-heart"></i>
+                            <h3>Consciência Financeira</h3>
+                            <p>Ajude a tomar decisões mais conscientes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Doação -->
+        <section id="doacao" class="donation">
+            <div class="container">
+                <h2>Me Ajude com um Café</h2>
+                <p class="donation-subtitle">Se este projeto te ajudou, considere me pagar um café virtual de R$ 2,00</p>
+                
+                <div class="donation-card">
+                    <div class="donation-content">
+                        <i class="fas fa-coffee donation-icon"></i>
+                        <h3>Doação de R$ 2,00</h3>
+                        <p>Equivale a um café expresso simples</p>
+                        <p class="donation-description">
+                            Sua doação ajuda a manter este projeto online e a desenvolver novas funcionalidades.
+                        </p>
+                        
+                        <div class="donation-methods">
+                            <button class="donation-btn pix" onclick="copyPixCode()">
+                                <i class="fas fa-qrcode"></i>
+                                PIX
+                            </button>
+                            <button class="donation-btn paypal" onclick="openPayPal()">
+                                <i class="fab fa-paypal"></i>
+                                PayPal
+                            </button>
+                        </div>
+                        
+                        <div class="pix-code" id="pix-code" style="display: none;">
+                            <p><strong>Chave PIX:</strong></p>
+                            <code>meucafe@exemplo.com</code>
+                            <button onclick="copyToClipboard('meucafe@exemplo.com')">Copiar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Meu Café. Feito com <i class="fas fa-heart"></i> para ajudar na consciência financeira.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
